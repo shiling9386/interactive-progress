@@ -1,10 +1,10 @@
 {
   "name": "interactive-progress",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "repository": "git@github.com:shiling9386/interactive-progress.git",
   "type": "module",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.mjs",
+  "main": "dist/index.umd.cjs",
+  "module": "dist/index.js",
   "files": [
     "dist"
   ],
