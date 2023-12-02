@@ -1,0 +1,33 @@
+.large {
+  width: 260px;
+  height: 55px;
+}
+
+.medium {
+  width: 180px;
+  height: 40px;
+}
+
+.small {
+  width: 132px;
+  height: 30px;
+}
+
+.ipBarContainer {
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.ipBlock {
+  flex: 1;
+  border-radius: 5px;
+  background-color: rgba(244, 244, 244, 1);
+}
+.ipBlock:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
