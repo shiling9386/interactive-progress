@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./InteractiveProgressBar.module.css";
+import styles from "./InteractiveProgressBar.module.scss";
 import { DEFAULT_BLOCKS } from "./constants";
 import { getColorByProgress } from "./utils";
 import classNames from "classnames";
@@ -47,6 +47,7 @@ export const InteractiveProgressBar = (props: InteractiveProgressBarProps) => {
     <div className={containerClass}>
       {Array.from({ length: totalBlocks }).map((_, index) => (
         <div
+          key={index}
           className={styles.ipBlock}
           style={{ backgroundColor: index < checked ? color : undefined }}
           onClick={() => handleClickAtIndex(index)}

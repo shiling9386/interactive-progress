@@ -4,6 +4,12 @@
   "version": "0.2.2",
   "repository": "git@github.com:shiling9386/interactive-progress.git",
   "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,12 +17,10 @@
     "preview": "vite preview"
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "classnames": "^2.3.2"
+    "classnames": "^2.3.2",
+    "react": "^18.2.0"
   },
   "devDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "@types/node": "^20.10.2",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
@@ -27,6 +31,9 @@
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vite-plugin-dts": "^3.6.4"
