@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { CSSProperties, useState } from "react";
 import styles from "./InteractiveProgressBar.module.scss";
 import { DEFAULT_BLOCKS } from "./constants";
 import { getColorByProgress } from "./utils";
@@ -9,6 +9,8 @@ export interface InteractiveProgressBarProps {
   onProgressChange: (progress: number) => void;
   initialProgress?: number;
   size?: "small" | "medium" | "large";
+  width?: CSSProperties["width"];
+  gap?: CSSProperties["gap"];
 }
 
 export const InteractiveProgressBar = (props: InteractiveProgressBarProps) => {
@@ -17,6 +19,8 @@ export const InteractiveProgressBar = (props: InteractiveProgressBarProps) => {
     onProgressChange,
     initialProgress,
     size = "medium",
+    width,
+    gap,
   } = props;
   const [checked, setChecked] = useState<number>(
     initialProgress ? Math.floor(initialProgress * totalBlocks) : 0
@@ -44,7 +48,7 @@ export const InteractiveProgressBar = (props: InteractiveProgressBarProps) => {
   );
 
   return (
-    <div className={containerClass}>
+    <div className={containerClass} style={{ width, gap }}>
       {Array.from({ length: totalBlocks }).map((_, index) => (
         <div
           key={index}

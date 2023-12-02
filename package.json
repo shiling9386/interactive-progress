@@ -1,7 +1,7 @@
 {
   "name": "interactive-progress-bar",
   "private": true,
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": "git@github.com:shiling9386/interactive-progress.git",
   "type": "module",
   "main": "dist/index.umd.js",
